@@ -12,7 +12,6 @@ describe('List', () => {
     });
 
     it('renders message correctly if todo list is empty', function () {
-        console.log(wrapper.text());
         expect(wrapper.text()).toContain("Add your first Todo task");
     });
 });
