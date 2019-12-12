@@ -12,8 +12,9 @@ describe('List test', () => {
     });
 
 
-    it('Check if the item is marked as done', () => {
+    it('Check if the item is marked as done', async () => {
         wrapper.find('.list-item div span').trigger('click');
-        expect(toDo[0].done).toEqual(true)
+        await wrapper.vm.$nextTick();
+        expect(toDo[0].done).toEqual(true);
     })
 });
